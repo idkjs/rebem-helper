@@ -1,59 +1,77 @@
 'use strict';
 
-var Block = require("bs-platform/lib/js/block.js");
 var ReBemHelper = require("../src/ReBemHelper.js");
 
-var myActiveBemClassNames = ReBemHelper.bem("my-block", undefined, /* :: */[
-      /* Boolean */Block.__(1, [
-          "active",
-          true
-        ]),
-      /* [] */0
-    ], undefined, /* () */0);
+var myActiveBemClassNames = ReBemHelper.bem("my-block", undefined, {
+      hd: {
+        TAG: /* Boolean */1,
+        _0: "active",
+        _1: true
+      },
+      tl: /* [] */0
+    }, undefined, undefined);
 
-ReBemHelper.bem("my-block", undefined, /* :: */[
-      /* String */Block.__(0, ["small"]),
-      /* [] */0
-    ], undefined, /* () */0);
+ReBemHelper.bem("my-block", undefined, {
+      hd: {
+        TAG: /* String */0,
+        _0: "small"
+      },
+      tl: /* [] */0
+    }, undefined, undefined);
 
-ReBemHelper.bem("my-block", undefined, /* :: */[
-      /* String */Block.__(0, ["small"]),
-      /* :: */[
-        /* Boolean */Block.__(1, [
-            "active",
-            true
-          ]),
-        /* [] */0
-      ]
-    ], undefined, /* () */0);
+ReBemHelper.bem("my-block", undefined, {
+      hd: {
+        TAG: /* String */0,
+        _0: "small"
+      },
+      tl: {
+        hd: {
+          TAG: /* Boolean */1,
+          _0: "active",
+          _1: true
+        },
+        tl: /* [] */0
+      }
+    }, undefined, undefined);
 
-ReBemHelper.bem("my-block", "element", /* :: */[
-      /* String */Block.__(0, ["small"]),
-      /* [] */0
-    ], undefined, /* () */0);
+ReBemHelper.bem("my-block", "element", {
+      hd: {
+        TAG: /* String */0,
+        _0: "small"
+      },
+      tl: /* [] */0
+    }, undefined, undefined);
 
-ReBemHelper.bem("my-block", undefined, /* :: */[
-      /* String */Block.__(0, ["small"]),
-      /* :: */[
-        /* Boolean */Block.__(1, [
-            "active",
-            true
-          ]),
-        /* :: */[
-          /* Switch */Block.__(2, [
-              "enable",
-              "disable",
-              false
-            ]),
-          /* [] */0
-        ]
-      ]
-    ], undefined, /* () */0);
+ReBemHelper.bem("my-block", undefined, {
+      hd: {
+        TAG: /* String */0,
+        _0: "small"
+      },
+      tl: {
+        hd: {
+          TAG: /* Boolean */1,
+          _0: "active",
+          _1: true
+        },
+        tl: {
+          hd: {
+            TAG: /* Switch */2,
+            _0: "enable",
+            _1: "disable",
+            _2: false
+          },
+          tl: /* [] */0
+        }
+      }
+    }, undefined, undefined);
 
-var mySizeBemClassNames = ReBemHelper.bem("my-block", "element", /* :: */[
-      /* String */Block.__(0, ["small"]),
-      /* [] */0
-    ], "some-other-class", /* () */0);
+var mySizeBemClassNames = ReBemHelper.bem("my-block", "element", {
+      hd: {
+        TAG: /* String */0,
+        _0: "small"
+      },
+      tl: /* [] */0
+    }, "some-other-class", undefined);
 
 var isActive = true;
 

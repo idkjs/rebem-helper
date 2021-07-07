@@ -1,6 +1,5 @@
 {
     "name" : "rebem-helper",
-    "refmt": 3,
     "bs-dependencies": [],
     "bs-dev-dependencies": [
         "@glennsl/bs-jest"
